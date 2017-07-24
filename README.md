@@ -4,7 +4,7 @@ This is a modified version of [Mooslyvania's](https://github.com/Moosylvania/mem
 I made this because I didn't feel like getting all the users of my [Discord bot](https://github.com/Ultie0/MagicalCat) to install [Canvas](https://github.com/Automattic/node-canvas) by Automattic, because it requires you to install a lot of dependencies, which is ok I guess, but some people don't want to install a lot of items.
 
 # To Install
-        $ npm install memecanvas
+        $ npm install memecanvas-prebuilt
 
 # Requirements
 Everything should be taken care of...

@@ -1,11 +1,13 @@
 # memecanvas
-Node.js Meme Generator that uses Node-Canvas to render the final image.
+Node.js Meme Generator that uses Node-Canvas-Prebuilt to render the final image.
+This is a modified version of [Mooslyvania's](https://github.com/Moosylvania/memecanvas) memecanvas.
+I made this because I didn't feel like getting all the users of my [Discord bot](https://github.com/Ultie0/MagicalCat) to install [Canvas](https://github.com/Automattic/node-canvas) by Automattic, because it requires you to install a lot of dependencies, which is ok I guess, but some people don't want to install a lot of items.
 
 # To Install
         $ npm install memecanvas
 
 # Requirements
-memecanvas utilizes Automattic's node-canvas module which has some pre-requisites that must be installed on your machine.  To find out more please check out their [Wiki](https://github.com/Automattic/node-canvas/wiki) and then come back here.
+Everything should be taken care of...
 
 # API
 

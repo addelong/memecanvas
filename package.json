@@ -1,6 +1,6 @@
 {
   "name": "memecanvas-prebuilt",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Node.js Meme Generator using Node Canvas-Prebuilt",
   "main": "index.js",
   "scripts": {

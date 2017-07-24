@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/Ultie0/memecanvas/issues"
   },
-  "homepage": "https://ulti.gq"
+  "homepage": "https://ulti.gq",
   "dependencies": {
     "async": "^1.3.0",
     "canvas-prebuilt": "^1.2.3",

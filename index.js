@@ -14,6 +14,8 @@ var drawText = function(context, pos, text, width, height) {
     context.fillStyle = "#fff";
     context.strokeStyle = "#000";
     context.lineWidth = 6;
+    context.lineJoin="miter";
+	  context.miterLimit=2;
 
     while(1) {
         context.font = fontSize + "px league-gothic-condensed";

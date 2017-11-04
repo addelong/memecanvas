@@ -16,7 +16,7 @@ var drawText = function(context, pos, text, width, height) {
     context.lineWidth = 6;
 
     while(1) {
-        context.font = "bold " + fontSize + "px League Gothic";
+        context.font = fontSize + "px league-gothic-condensed";
         if( (context.measureText(text).width < (width-15)) && (fontSize < height/10) ) {
             break;
         }

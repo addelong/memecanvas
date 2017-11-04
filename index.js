@@ -8,7 +8,7 @@ var endsWith = function(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 };
 
-var drawText = function(context, pos, text, width, height) {
+var drawText = function(context, pos, text, width, height, fontName) {
     var fontSize = 100;
     context.textAlign = "center";
     context.fillStyle = "#fff";
@@ -16,7 +16,13 @@ var drawText = function(context, pos, text, width, height) {
     context.lineWidth = 6;
 
     while(1) {
-        context.font = "bold " + fontSize + "px Impact";
+        context.font = "bold " + fontSize + "px ";
+        if (fontName){
+          context.font += fontName;
+        }
+        else {
+          context.font += "Impact";
+        }
         if( (context.measureText(text).width < (width-15)) && (fontSize < height/10) ) {
             break;
         }
@@ -42,14 +48,15 @@ memecanvas.init = function(output, append){
     appendedFilename = append;
 };
 
-memecanvas.generate = function(file, topText, bottomText, next){
+memecanvas.generate = function(file, topText, bottomText, next, fontPath, fontName){
+
     image.get(file, function(img){
         if(img){
             try{
-                var ctx = image.ctx(img.canvas.width, img.canvas.height);
+                var ctx = image.ctx(img.canvas.width, img.canvas.height, fontPath, fontName);
                 ctx.drawImage(img.canvas, 0, 0);
-                ctx = drawText(ctx, 'top', topText, img.canvas.width, img.canvas.height);
-                ctx = drawText(ctx, 'bottom', bottomText, img.canvas.width, img.canvas.height);
+                ctx = drawText(ctx, 'top', topText, img.canvas.width, img.canvas.height, fontName);
+                ctx = drawText(ctx, 'bottom', bottomText, img.canvas.width, img.canvas.height, fontName);
 
                 var memefilename = file.split('/');
                 memefilename = memefilename[memefilename.length-1];
